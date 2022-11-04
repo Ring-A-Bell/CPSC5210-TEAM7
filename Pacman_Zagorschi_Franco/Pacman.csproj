@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4BCC3B20-D4C6-4738-A4CE-9F6561723A39}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pacman_Zagorschi_Franco</RootNamespace>
+    <AssemblyName>Pacman_Zagorschi_Franco</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="font-a-licious_pacfont-good%281%29.zip" />
+    <None Include="PacFont Good.ttf" />
+    <None Include="PacFont.ttf" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg-name.jpg" />
+    <None Include="Resources\pacman-bg.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\vup.gif" />
+    <None Include="Resources\vsx.gif" />
+    <None Include="Resources\vdx.gif" />
+    <None Include="Resources\vdown.gif" />
+    <None Include="Resources\gup.gif" />
+    <None Include="Resources\gsx.gif" />
+    <None Include="Resources\gdx.gif" />
+    <None Include="Resources\gdown.gif" />
+    <None Include="Resources\aup.gif" />
+    <None Include="Resources\asx.gif" />
+    <None Include="Resources\adx.gif" />
+    <None Include="Resources\adown.gif" />
+    <None Include="Resources\pacmorto.gif" />
+    <None Include="Resources\mup.png" />
+    <None Include="Resources\msx.png" />
+    <None Include="Resources\mdx.png" />
+    <None Include="Resources\mdown.png" />
+    <None Include="Resources\tempo.gif" />
+    <None Include="Resources\gamewin1.bmp" />
+    <None Include="Resources\gamewin.bmp" />
+    <None Include="Resources\gameover.PNG" />
+    <None Include="Resources\ball.gif" />
+    <None Include="Resources\www.GIFCreator.me_SaUZAd.gif" />
+    <None Include="Resources\crazy.gif" />
+    <None Include="Resources\logo22.jpg" />
+    <None Include="Resources\logo21.jpg" />
+    <None Include="Resources\logo2.jpg" />
+    <None Include="Resources\rdx2.gif" />
+    <None Include="Resources\rup.gif" />
+    <None Include="Resources\rsx.gif" />
+    <None Include="Resources\rdx.gif" />
+    <None Include="Resources\rdown.gif" />
+    <None Include="Resources\www.GIFCreator.me_1l0GRt.gif" />
+    <None Include="Resources\logo.PNG" />
+    <None Include="Resources\playgame2.bmp" />
+    <None Include="Resources\playgame.PNG" />
+    <None Include="Resources\mup.gif" />
+    <None Include="Resources\getready.PNG" />
+    <None Include="Resources\1up.png" />
+    <None Include="Resources\1sx.png" />
+    <None Include="Resources\1dx.png" />
+    <None Include="Resources\1down.png" />
+    <None Include="Resources\pacdown.gif" />
+    <None Include="Resources\pacup.gif" />
+    <None Include="Resources\pacsx.gif" />
+    <None Include="Resources\pacdx.gif" />
+    <None Include="Resources\score.bmp" />
+    <None Include="Resources\lives.bmp" />
+    <None Include="Resources\vita1.bmp" />
+    <None Include="Resources\prova.gif" />
+    <None Include="Resources\vita.bmp" />
+    <None Include="Resources\percorso1.bmp" />
+    <None Include="Resources\percorso.jpg" />
+    <None Include="Resources\percorso.bmp" />
+    <None Include="Resources\pacdx1.gif" />
+    <None Include="Resources\pacup2.bmp" />
+    <None Include="Resources\pacsx1.bmp" />
+    <None Include="Resources\pacdown1.bmp" />
+    <None Include="Resources\pacdx.bmp" />
+    <None Include="Resources\pacman-game-online1.bmp" />
+    <None Include="Resources\pacman-game-online.bmp" />
+    <None Include="Resources\www.GIFCreator.me_gzjAgd.gif" />
+    <None Include="bin\Debug\percorso.bmp" />
+    <None Include="bin\Debug\percorso.jpg" />
+    <Content Include="Bitmap1.bmp" />
+    <None Include="Resources\up.gif" />
+    <None Include="Resources\down.gif" />
+    <None Include="Resources\sx.gif" />
+    <None Include="Resources\dx.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
