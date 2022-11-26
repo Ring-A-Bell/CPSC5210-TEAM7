@@ -1,0 +1,11 @@
+D:\Git_Projects\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\bin\Debug\Pacman_Zagorschi_Franco.exe.config
+D:\Git_Projects\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\bin\Debug\Pacman_Zagorschi_Franco.exe
+D:\Git_Projects\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\bin\Debug\Pacman_Zagorschi_Franco.pdb
+D:\Git_Projects\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\obj\Debug\Pacman.csproj.AssemblyReference.cache
+D:\Git_Projects\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\obj\Debug\Pacman.csproj.SuggestedBindingRedirects.cache
+D:\Git_Projects\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\obj\Debug\Pacman_Zagorschi_Franco.Form1.resources
+D:\Git_Projects\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\obj\Debug\Pacman_Zagorschi_Franco.Properties.Resources.resources
+D:\Git_Projects\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\obj\Debug\Pacman.csproj.GenerateResource.cache
+D:\Git_Projects\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\obj\Debug\Pacman.csproj.CoreCompileInputs.cache
+D:\Git_Projects\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\obj\Debug\Pacman_Zagorschi_Franco.exe
+D:\Git_Projects\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\obj\Debug\Pacman_Zagorschi_Franco.pdb

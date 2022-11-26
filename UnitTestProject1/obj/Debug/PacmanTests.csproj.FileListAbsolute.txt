@@ -1,0 +1,14 @@
+D:\Git_Projects\CPSC5210-TEAM7\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+D:\Git_Projects\CPSC5210-TEAM7\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+D:\Git_Projects\CPSC5210-TEAM7\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\Git_Projects\CPSC5210-TEAM7\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\Git_Projects\CPSC5210-TEAM7\UnitTestProject1\bin\Debug\Pacman_Zagorschi_Franco.exe
+D:\Git_Projects\CPSC5210-TEAM7\UnitTestProject1\bin\Debug\Pacman_Zagorschi_Franco.pdb
+D:\Git_Projects\CPSC5210-TEAM7\UnitTestProject1\bin\Debug\Pacman_Zagorschi_Franco.exe.config
+D:\Git_Projects\CPSC5210-TEAM7\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\Git_Projects\CPSC5210-TEAM7\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\Git_Projects\CPSC5210-TEAM7\UnitTestProject1\obj\Debug\PacmanTests.csproj.AssemblyReference.cache
+D:\Git_Projects\CPSC5210-TEAM7\UnitTestProject1\obj\Debug\PacmanTests.csproj.CoreCompileInputs.cache
+D:\Git_Projects\CPSC5210-TEAM7\UnitTestProject1\obj\Debug\PacmanTests.csproj.CopyComplete
+D:\Git_Projects\CPSC5210-TEAM7\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+D:\Git_Projects\CPSC5210-TEAM7\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
