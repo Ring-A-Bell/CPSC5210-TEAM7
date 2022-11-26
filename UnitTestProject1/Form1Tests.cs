@@ -255,5 +255,25 @@ namespace Pacman_Zagorschi_Franco
             //Check
             Assert.AreEqual(false, form.attendo.Enabled);
         }
+
+        [DataTestMethod]
+        [DataRow(true, true, 3)]
+        [DataRow(true, false, 2)]
+        [DataRow(false, false, 1)]
+        public void life_dependsOnVita(bool picbox1, bool picbox2, int lives)
+        {
+            //Set
+            var form = new Pacman_Zagorschi_Franco.Form1();
+
+            //Execute
+            form.resetall();
+            form.vita = lives;
+            Console.WriteLine(form.vita);
+            Console.WriteLine(form.getPictureBox()[0].Visible);
+            form.life();
+            Console.WriteLine(form.getPictureBox()[0].Visible);
+            //Test
+            CollectionAssert.AreEqual(new[] { picbox1, picbox2 }, new[] { form.getPictureBox()[0].Visible, form.getPictureBox()[1].Visible });
+        }
     }
 }
