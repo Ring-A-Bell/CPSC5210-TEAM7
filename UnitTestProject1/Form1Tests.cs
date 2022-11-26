@@ -491,5 +491,18 @@ namespace Pacman_Zagorschi_Franco
             Assert.IsTrue(true);
         }
 
+        [TestMethod]
+        public void test_timer2_Tick()
+        {
+            //Setup
+            var form = new Pacman_Zagorschi_Franco.Form1();
+
+            //Execute
+            form.timer2_Tick(null, null);
+
+            //Test
+            CollectionAssert.AreEqual(new[] { false, true, false, true }, new[] { form.getLabel3().Visible, form.timer1.Enabled, form.timer2.Enabled, form.c });
+        }
+
     }
 }
