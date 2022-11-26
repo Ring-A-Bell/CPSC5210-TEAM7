@@ -209,18 +209,18 @@ namespace Pacman_Zagorschi_Franco
             CollectionAssert.AreEqual(new[] { form.pictureBox3.Visible, form.button1.Visible, form.timer9.Enabled }, new[] { true, true, false });
         }
 
-        //[TestMethod]
-        //public void timer7_Tick_timer7_false_panel1_true_attendo_true()
-        //{
-        //    //Set
-        //    var form = new Pacman_Zagorschi_Franco.Form1();
+        [TestMethod]
+        public void timer7_Tick_timer7_false_panel1_true_attendo_true()
+        {
+            //Set
+            var form = new Pacman_Zagorschi_Franco.Form1();
 
-        //    //Execute
-        //    form.timer7_Tick(null, null);
-        //    var x = new[] { form.timer7.Enabled, form.panel1.Visible, form.attendo.Enabled };
+            //Execute
+            form.timer7_Tick(null, null);
+            var x = new[] { form.timer7.Enabled, form.panel1.Visible, form.attendo.Enabled };
 
-        //    //Check
-        //    CollectionAssert.AreEqual(new[] { form.timer7.Enabled, form.panel1.Visible, form.attendo.Enabled }, new[] { false, true, true });
-        //}
+            //Check
+            CollectionAssert.AreEqual(new[] { form.timer7.Enabled, form.panel1.Visible, form.attendo.Enabled }, new[] { false, true, true });
+        }
     }
 }
