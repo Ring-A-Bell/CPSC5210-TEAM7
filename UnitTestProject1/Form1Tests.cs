@@ -572,5 +572,54 @@ namespace Pacman_Zagorschi_Franco
             }
         }
 
+        [DataTestMethod]
+        [DataRow(149, 175, 299)]
+        [DataRow(150, 175, 299)]
+        [DataRow(151, 175, 299)]
+        [DataRow(151, 176, 299)]
+        [DataRow(151, 153, 300)]
+        [DataRow(151, 153, 301)]
+        [DataRow(151, 154, 300)]
+        [DataRow(151, 154, 301)]
+        [DataRow(151, 175, 300)]
+        [DataRow(151, 175, 301)]
+        [DataRow(151, 176, 300)]
+        [DataRow(151, 176, 301)]
+        public void test_timer5Tick(int ghost2TopValue, int ghost2LeftValue, int tic5Value)
+        {
+            //Setup
+            var form = new Pacman_Zagorschi_Franco.Form1();
+
+            //Execute
+            form.tic5 = tic5Value;
+            form.ghost2.Left = ghost2LeftValue;
+            bool timer6 = form.timer6.Enabled;
+            bool timer5 = form.timer5.Enabled;
+            form.ghost2.Top = ghost2TopValue;
+            form.timer5_Tick(null, null);
+
+            //Test
+            if (ghost2TopValue == 151 && ghost2LeftValue == 175 && tic5Value > 299)
+            {
+                CollectionAssert.AreEqual(new[] { true, false }, new[] { form.timer6.Enabled, form.timer5.Enabled }, "All three ifs passed");
+            }
+            else if (ghost2TopValue != 151 && ghost2LeftValue == 175 && tic5Value > 299)
+            {
+                CollectionAssert.AreEqual(new[] { timer6, timer5 }, new[] { form.timer6.Enabled, form.timer5.Enabled }, "First 2 ifs passed");
+            }
+            else if (ghost2TopValue == 151 && ghost2LeftValue == 176)
+            {
+                CollectionAssert.AreEqual(new[] { true, false }, new[] { form.timer6.Enabled, form.timer5.Enabled }, "Last 2 ifs passed");
+            }
+            else if (ghost2TopValue == 150)
+            {
+                CollectionAssert.AreEqual(new[] { true, false }, new[] { form.timer6.Enabled, form.timer5.Enabled }, "First 2 ifs passed");
+            }
+            else
+            {
+                CollectionAssert.AreEqual(new[] { timer6, timer5 }, new[] { form.timer6.Enabled, form.timer5.Enabled }, "Last if not passed");
+            }
+        }
+
     }
 }
