@@ -299,5 +299,35 @@ namespace Pacman_Zagorschi_Franco
                 CollectionAssert.AreEqual(new[] { resultantDirection, next, next }, new[] { form.top, form.direzione, form.temp });
 
         }
+
+        // Increasing statement coverage & decision coverage
+        [DataTestMethod]
+        [DataRow(true, 0, 0, 374)]
+        [DataRow(true, 0, 1, -26)]
+        [DataRow(true, 1, 0, 374)]
+        public void testTransport(bool charTurn, int i, int n, int left)
+        {
+            //Set
+            var form = new Pacman_Zagorschi_Franco.Form1();
+
+            form.pacturn = charTurn;
+            form.ghost1turn = charTurn;
+            form.ghost2turn = charTurn;
+            form.ghost3turn = charTurn;
+            form.ghost4turn = charTurn;
+
+            //Execute
+            form.transport(i, n);
+            int[] arr = form.getCharacterLeft();
+            int[] res = { left, left, left, left, left };
+
+            for (int j = 0; j < 4; j++)
+                Console.WriteLine(arr[0] + "," + res[j]);
+
+            //Check
+            CollectionAssert.AreEqual(arr, res);
+
+        }
+
     }
 }
