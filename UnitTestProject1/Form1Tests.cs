@@ -524,5 +524,53 @@ namespace Pacman_Zagorschi_Franco
                 CollectionAssert.AreEqual(new[] { ghost2TopValue + 1, ghost4TopValue + 1, startDirectionValue }, new[] { form.ghost2.Top, form.ghost4.Top, form.startdirection });
         }
 
+        [DataTestMethod]
+        [DataRow(149, 99)]
+        [DataRow(149, 100)]
+        [DataRow(149, 101)]
+        [DataRow(150, 99)]
+        [DataRow(150, 100)]
+        [DataRow(150, 101)]
+        [DataRow(151, 99)]
+        [DataRow(151, 100)]
+        [DataRow(151, 101)]
+        [DataRow(152, 99)]
+        [DataRow(152, 100)]
+        [DataRow(152, 101)]
+        public void test_timer4_Tick(int ghost3TopValue, int tic4Value)
+        {
+            //Set
+            var form = new Pacman_Zagorschi_Franco.Form1();
+
+            //Execute
+            int prec1Value = form.prec1;
+            bool timer4 = form.timer4.Enabled;
+            form.tic4 = tic4Value;
+            form.ghost3.Top = ghost3TopValue;
+            form.timer4_Tick(null, null);
+
+            //Test
+            if (ghost3TopValue > 151 && tic4Value > 99)
+            {
+                CollectionAssert.AreEqual(new[] { tic4Value + 1, 3, ghost3TopValue - 1, Convert.ToInt32(timer4) }, new[] { form.tic4, form.prec1, form.ghost3.Top, Convert.ToInt32(form.timer4.Enabled) });
+
+            }
+            else if (ghost3TopValue > 150 && tic4Value > 99)
+            {
+                CollectionAssert.AreEqual(new[] { tic4Value + 1, 3, ghost3TopValue - 1, Convert.ToInt32(false) }, new[] { form.tic4, form.prec1, form.ghost3.Top, Convert.ToInt32(form.timer4.Enabled) });
+
+            }
+            else if (ghost3TopValue == 150)
+            {
+                CollectionAssert.AreEqual(new[] { tic4Value + 1, prec1Value, ghost3TopValue, Convert.ToInt32(false) }, new[] { form.tic4, form.prec1, form.ghost3.Top, Convert.ToInt32(form.timer4.Enabled) });
+
+            }
+            else
+            {
+                CollectionAssert.AreEqual(new[] { tic4Value + 1, prec1Value, ghost3TopValue, Convert.ToInt32(timer4) }, new[] { form.tic4, form.prec1, form.ghost3.Top, Convert.ToInt32(form.timer4.Enabled) });
+
+            }
+        }
+
     }
 }
