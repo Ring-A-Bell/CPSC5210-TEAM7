@@ -242,5 +242,18 @@ namespace Pacman_Zagorschi_Franco
             //Check
             CollectionAssert.AreEqual(new[] { form.timer3.Enabled, form.timer4.Enabled, form.c, form.timer5.Enabled }, result);
         }
+
+        [TestMethod]
+        public void attendo_Tick_attendoEnabled_false()
+        {
+            //Set
+            var form = new Pacman_Zagorschi_Franco.Form1();
+
+            //Execute
+            form.attendo_Tick(null, null);
+
+            //Check
+            Assert.AreEqual(false, form.attendo.Enabled);
+        }
     }
 }
