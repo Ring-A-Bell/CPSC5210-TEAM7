@@ -222,5 +222,25 @@ namespace Pacman_Zagorschi_Franco
             //Check
             CollectionAssert.AreEqual(new[] { form.timer7.Enabled, form.panel1.Visible, form.attendo.Enabled }, new[] { false, true, true });
         }
+
+        // Have to use a test stub here
+        [TestMethod]
+        public void control_timer_3to5_false_true_false_c_false()
+        {
+            //Set
+            var form = new Pacman_Zagorschi_Franco.Form1();
+            form.resetall();
+
+            //Execute
+            form.control();
+            bool[] result = new bool[4];
+            result[0] = false;
+            result[1] = true;
+            result[2] = false;
+            result[3] = true;
+
+            //Check
+            CollectionAssert.AreEqual(new[] { form.timer3.Enabled, form.timer4.Enabled, form.c, form.timer5.Enabled }, result);
+        }
     }
 }
