@@ -1182,6 +1182,12 @@ namespace Pacman_Zagorschi_Franco
             pacman.Top += top;
         }
 
+        //Getter function to access Pacman
+        public PictureBox getPacman()
+        {
+            return pacman;
+        }
+
         //incrocio sulla mappa
         public void a(int left, int top)
         {
