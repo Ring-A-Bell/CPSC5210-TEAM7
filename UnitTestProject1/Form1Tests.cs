@@ -275,5 +275,29 @@ namespace Pacman_Zagorschi_Franco
             //Test
             CollectionAssert.AreEqual(new[] { picbox1, picbox2 }, new[] { form.getPictureBox()[0].Visible, form.getPictureBox()[1].Visible });
         }
+
+        [DataTestMethod]
+        [DataRow(1, 2, 2)]
+        [DataRow(2, 1, -2)]
+        [DataRow(3, 4, 2)]
+        [DataRow(4, 3, -2)]
+        public void freedirection_nextDirection_keyPress(int direction, int next, int resultantDirection)
+        {
+            //Set
+            var form = new Pacman_Zagorschi_Franco.Form1();
+
+            //Execute
+            form.resetall();
+            form.direzione = direction;
+            form.next = next;
+            form.freedirection();
+
+            //Test
+            if (direction == 1 || direction == 2)
+                CollectionAssert.AreEqual(new[] { resultantDirection, next, next }, new[] { form.left, form.direzione, form.temp });
+            if (direction == 3 || direction == 4)
+                CollectionAssert.AreEqual(new[] { resultantDirection, next, next }, new[] { form.top, form.direzione, form.temp });
+
+        }
     }
 }
