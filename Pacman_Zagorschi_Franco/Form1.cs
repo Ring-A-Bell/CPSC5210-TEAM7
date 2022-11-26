@@ -1420,6 +1420,12 @@ namespace Pacman_Zagorschi_Franco
             }
         }
 
+        //Getter function to get ghost.Left values
+        public int[] getCharacterLeft()
+        {
+            return new[] { pacman.Left, ghost1.Left, ghost2.Left, ghost3.Left, ghost4.Left };
+        }
+
         //effettiva modifica della posizione dei fantasmini
         public void ghost()
         {
