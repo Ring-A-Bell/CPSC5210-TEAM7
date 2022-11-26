@@ -383,5 +383,76 @@ namespace Pacman_Zagorschi_Franco
             CollectionAssert.AreEqual(new[] { left + pacmanLeft, top + pacmanTop }, new[] { form.getPacman().Left, form.getPacman().Top });
         }
 
+        [DataTestMethod]
+        [DataRow(174, 148)]
+        [DataRow(174, 0)]
+
+        [DataRow(24, 364)]
+        [DataRow(24, 328)]
+        [DataRow(24, 292)]
+        [DataRow(24, 256)]
+        [DataRow(24, 112)]
+        [DataRow(24, 76)]
+        [DataRow(24, 28)]
+        [DataRow(24, 0)]
+
+        [DataRow(48, 328)]
+        [DataRow(48, 292)]
+
+        [DataRow(84, 364)]
+        [DataRow(84, 328)]
+        [DataRow(84, 292)]
+        [DataRow(84, 256)]
+        [DataRow(84, 112)]
+        [DataRow(84, 184)]
+        [DataRow(84, 76)]
+        [DataRow(84, 28)]
+
+        [DataRow(120, 364)]
+        [DataRow(120, 328)]
+        [DataRow(120, 292)]
+        [DataRow(120, 256)]
+        [DataRow(120, 112)]
+        [DataRow(120, 184)]
+        [DataRow(120, 76)]
+        [DataRow(120, 28)]
+        [DataRow(120, 148)]
+        [DataRow(120, 220)]
+
+        [DataRow(156, 364)]
+        [DataRow(156, 328)]
+        [DataRow(156, 292)]
+        [DataRow(156, 256)]
+        [DataRow(156, 112)]
+        [DataRow(156, 184)]
+        [DataRow(156, 76)]
+        [DataRow(156, 28)]
+        [DataRow(156, 148)]
+        [DataRow(156, 220)]
+
+        [DataRow(192, 364)]
+
+        [DataRow(120, 328)]
+        [DataRow(120, 292)]
+        [DataRow(120, 256)]
+        [DataRow(120, 112)]
+        [DataRow(120, 184)]
+        [DataRow(120, 76)]
+        [DataRow(120, 28)]
+        [DataRow(120, 148)]
+        [DataRow(120, 220)]
+        public void testCrossRoads_functionA(int left, int top)
+        {
+            //Set
+            var form = new Pacman_Zagorschi_Franco.Form1();
+
+            //Execute
+            form.pacturn = true;
+            form.a(left, top);
+
+            //Test
+            Assert.IsTrue(true);
+        }
+
     }
 }
