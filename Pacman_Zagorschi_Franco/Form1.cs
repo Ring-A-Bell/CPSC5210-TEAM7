@@ -787,6 +787,19 @@ namespace Pacman_Zagorschi_Franco
                 pictureBox2.Visible = false;
             }
         }
+
+        //Getter function to access Pictureboxes
+        public PictureBox[] getPictureBox()
+        {
+            return new[] { pictureBox1, pictureBox2 };
+        }
+        public void supermod()
+        {
+            if (pacman.Bounds.IntersectsWith(label173.Bounds) && label173.Visible == true) supermod2();
+            if (pacman.Bounds.IntersectsWith(label307.Bounds) && label307.Visible == true) supermod2();
+            if (pacman.Bounds.IntersectsWith(label220.Bounds) && label220.Visible == true) supermod2();
+            if (pacman.Bounds.IntersectsWith(label71.Bounds) && label71.Visible == true) supermod2();
+        }
         public void supermod()
         {
             if (pacman.Bounds.IntersectsWith(label173.Bounds) && label173.Visible == true) supermod2();
