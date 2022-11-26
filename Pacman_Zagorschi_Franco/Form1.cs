@@ -467,6 +467,12 @@ namespace Pacman_Zagorschi_Franco
             c = true;
         }
 
+        //Getter function to access Label3
+        public Label getLabel3()
+        {
+            return label3;
+        }
+
         //timer3
         public void timer3_Tick(object sender, EventArgs e)
         {
