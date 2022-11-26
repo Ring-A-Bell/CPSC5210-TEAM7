@@ -329,5 +329,41 @@ namespace Pacman_Zagorschi_Franco
 
         }
 
+        [DataTestMethod]
+        [DataRow(true, 300, 20, 100, 40)]
+        public void testGhost(bool enabled, int ghostLeft, int willGhostLeft, int ghostTop, int willGhostTop)
+        {
+            //Set
+            var form = new Pacman_Zagorschi_Franco.Form1();
+
+            //Execute
+            form.ghost1.Left = ghostLeft;
+            form.leftghost1 = willGhostLeft;
+            form.ghost1.Top = ghostTop;
+            form.topghost1 = willGhostTop;
+
+            form.ghost2.Left = ghostLeft;
+            form.leftghost2 = willGhostLeft;
+            form.ghost2.Top = ghostTop;
+            form.topghost2 = willGhostTop;
+
+            form.ghost3.Left = ghostLeft;
+            form.leftghost3 = willGhostLeft;
+            form.ghost3.Top = ghostTop;
+            form.topghost3 = willGhostTop;
+
+            form.ghost4.Left = ghostLeft;
+            form.leftghost4 = willGhostLeft;
+            form.ghost4.Top = ghostTop;
+            form.topghost4 = willGhostTop;
+
+            int ghostLeftSum = ghostLeft + willGhostLeft;
+            int ghostTopSum = ghostTop + willGhostTop;
+
+            //Verify
+            form.ghost();
+            CollectionAssert.AreEqual(new[] { ghostLeftSum, ghostTopSum, ghostLeftSum, ghostTopSum, ghostLeftSum, ghostTopSum, ghostLeftSum, ghostTopSum }, new[] { form.ghost1.Left, form.ghost1.Top, form.ghost2.Left, form.ghost2.Top, form.ghost3.Left, form.ghost3.Top, form.ghost4.Left, form.ghost4.Top });
+        }
+
     }
 }
