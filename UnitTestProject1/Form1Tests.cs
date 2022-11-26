@@ -621,5 +621,53 @@ namespace Pacman_Zagorschi_Franco
             }
         }
 
+        [DataTestMethod]
+        [DataRow(149, 199, 99)]
+        [DataRow(150, 199, 99)]
+        [DataRow(151, 199, 99)]
+        [DataRow(151, 200, 99)]
+        [DataRow(151, 176, 100)]
+        [DataRow(151, 176, 101)]
+        [DataRow(151, 177, 100)]
+        [DataRow(151, 177, 101)]
+        [DataRow(151, 177, 100)]
+        [DataRow(151, 177, 101)]
+        [DataRow(151, 176, 100)]
+        [DataRow(151, 176, 101)]
+        public void test_timer6Tick(int ghost4TopValue, int ghost4LeftValue, int tic6Value)
+        {
+            //Setup
+            var form = new Pacman_Zagorschi_Franco.Form1();
+
+            //Execute
+            form.tic6 = tic6Value;
+            form.ghost4.Left = ghost4LeftValue;
+            bool timer6 = form.timer6.Enabled;
+            form.ghost4.Top = ghost4TopValue;
+            form.timer6_Tick(null, null);
+
+            //Test
+            if (ghost4TopValue == 151 && ghost4LeftValue == 177 && tic6Value > 99)
+            {
+                Assert.AreEqual(false, form.timer6.Enabled, "All three ifs passed");
+            }
+            else if (ghost4TopValue != 151 && ghost4LeftValue == 177 && tic6Value > 99)
+            {
+                Assert.AreEqual(timer6, form.timer6.Enabled, "First 2 ifs passed");
+            }
+            else if (ghost4TopValue == 151 && ghost4LeftValue == 176)
+            {
+                Assert.AreEqual(false, form.timer6.Enabled, "Last 2 ifs passed");
+            }
+            else if (ghost4TopValue == 150)
+            {
+                Assert.AreEqual(false, form.timer6.Enabled, "First 2 ifs passed");
+            }
+            else
+            {
+                Assert.AreEqual(timer6, form.timer6.Enabled, "Last if not passed");
+            }
+        }
+
     }
 }
