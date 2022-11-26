@@ -196,18 +196,18 @@ namespace Pacman_Zagorschi_Franco
 
         //Tests fail for some reason. Looking into later
 
-        //[TestMethod]
-        //public void timer9_Tick_picturebox3_true_button1_true_timer9_false()
-        //{
-        //    //Set
-        //    var form = new Pacman_Zagorschi_Franco.Form1();
+        [TestMethod]
+        public void timer9_Tick_picturebox3_true_button1_true_timer9_false()
+        {
+            //Set
+            var form = new Pacman_Zagorschi_Franco.Form1();
 
-        //    //Execute
-        //    form.timer9_Tick(null, null);
+            //Execute
+            form.timer9_Tick(null, null);
 
-        //    //Check
-        //    CollectionAssert.AreEqual(new[] { form.pictureBox3.Visible, form.button1.Visible, form.timer9.Enabled }, new[] { true, true, false });
-        //}
+            //Check
+            CollectionAssert.AreEqual(new[] { form.pictureBox3.Visible, form.button1.Visible, form.timer9.Enabled }, new[] { true, true, false });
+        }
 
         //[TestMethod]
         //public void timer7_Tick_timer7_false_panel1_true_attendo_true()
