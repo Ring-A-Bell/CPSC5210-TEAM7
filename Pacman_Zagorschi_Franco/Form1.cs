@@ -800,12 +800,18 @@ namespace Pacman_Zagorschi_Franco
             if (pacman.Bounds.IntersectsWith(label220.Bounds) && label220.Visible == true) supermod2();
             if (pacman.Bounds.IntersectsWith(label71.Bounds) && label71.Visible == true) supermod2();
         }
-        public void supermod()
+
+        //Setter function to set Label visibility
+        public void setLabelVisible(int labelNum)
         {
-            if (pacman.Bounds.IntersectsWith(label173.Bounds) && label173.Visible == true) supermod2();
-            if (pacman.Bounds.IntersectsWith(label307.Bounds) && label307.Visible == true) supermod2();
-            if (pacman.Bounds.IntersectsWith(label220.Bounds) && label220.Visible == true) supermod2();
-            if (pacman.Bounds.IntersectsWith(label71.Bounds) && label71.Visible == true) supermod2();
+            if (labelNum == 173)
+                label173.Visible = true;
+            else if (labelNum == 307)
+                label307.Visible = true;
+            else if (labelNum == 220)
+                label220.Visible = true;
+            else if (labelNum == 71)
+                label71.Visible = true;
         }
         public void supermod2()
         {

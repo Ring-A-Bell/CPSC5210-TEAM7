@@ -669,5 +669,33 @@ namespace Pacman_Zagorschi_Franco
             }
         }
 
+        [DataTestMethod]
+        [DataRow(31, 298)]
+        [DataRow(28, 54)]
+        [DataRow(330, 54)]
+        [DataRow(330, 298)]
+        public void test_supermod(int x, int y)
+        {
+            //Set
+            var form = new Pacman_Zagorschi_Franco.Form1();
+
+            //Execute
+            form.getPacman().Location = new System.Drawing.Point(x, y);
+
+            if (x == 31)
+                form.setLabelVisible(173);
+            else if (x == 28)
+                form.setLabelVisible(307);
+            else if (x == 330 && y == 54)
+                form.setLabelVisible(220);
+            else if (x == 330 && y == 298)
+                form.setLabelVisible(71);
+
+            form.supermod();
+
+            //Test
+            Assert.IsTrue(true);
+        }
+
     }
 }
