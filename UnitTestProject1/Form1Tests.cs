@@ -5,6 +5,8 @@ using System.Reflection;
 using System.IO;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Windows.Forms;
+
 namespace Pacman_Zagorschi_Franco
 {
     [TestClass]
@@ -452,6 +454,25 @@ namespace Pacman_Zagorschi_Franco
 
             //Test
             Assert.IsTrue(true);
+        }
+
+        [DataTestMethod]
+        [DataRow(Keys.Left, 1)]
+        [DataRow(Keys.Right, 2)]
+        [DataRow(Keys.Up, 3)]
+        [DataRow(Keys.Down, 4)]
+        [DataRow(Keys.Escape, 0)]
+        public void test_Form1_KeyDown(Keys keyValue, int resultantTemp)
+        {
+            //Set
+            var form = new Pacman_Zagorschi_Franco.Form1();
+
+            //Execute
+            KeyEventArgs e = new KeyEventArgs(keyValue);
+            form.Form1_KeyDown(null, e);
+
+            //Test
+            Assert.AreEqual(resultantTemp, form.temp);
         }
 
     }
