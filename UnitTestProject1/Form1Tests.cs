@@ -504,5 +504,25 @@ namespace Pacman_Zagorschi_Franco
             CollectionAssert.AreEqual(new[] { false, true, false, true }, new[] { form.getLabel3().Visible, form.timer1.Enabled, form.timer2.Enabled, form.c });
         }
 
+        [DataTestMethod]
+        [DataRow(180, 100, 2)]
+        [DataRow(192, 100, 1)]
+        public void test_timer3_Tick(int ghost2TopValue, int ghost4TopValue, int startDirectionValue)
+        {
+            //Set
+            var form = new Pacman_Zagorschi_Franco.Form1();
+
+            //Execute
+            form.ghost2.Top = ghost2TopValue;
+            form.ghost4.Top = ghost4TopValue;
+            form.timer3_Tick(null, null);
+
+            //Test
+            if (startDirectionValue == 1)
+                CollectionAssert.AreEqual(new[] { ghost2TopValue - 1, ghost4TopValue - 1, startDirectionValue }, new[] { form.ghost2.Top, form.ghost4.Top, form.startdirection });
+            else if (startDirectionValue == 2)
+                CollectionAssert.AreEqual(new[] { ghost2TopValue + 1, ghost4TopValue + 1, startDirectionValue }, new[] { form.ghost2.Top, form.ghost4.Top, form.startdirection });
+        }
+
     }
 }
