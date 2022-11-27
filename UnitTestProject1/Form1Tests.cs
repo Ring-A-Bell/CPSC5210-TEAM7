@@ -394,7 +394,28 @@ namespace Pacman_Zagorschi_Franco
             Assert.AreEqual(false, form.attendo.Enabled);
         }
 
-        [DataTestMethod]
+        [TestMethod]
+        [DataRow(3)]
+        [DataRow(2)]
+        [DataRow(1)]
+        [DataRow(0)]
+        public void test_life(int _vita)
+        {
+            //Set
+            var form = new Pacman_Zagorschi_Franco.Form1();
+
+            //Execute
+            form.life();
+            form.vita = _vita;
+
+            //Check
+            Assert.AreEqual(_vita, form.vita);
+
+
+        }
+
+
+        /*[DataTestMethod]
         [DataRow(true, true, 3)]
         [DataRow(true, false, 2)]
         [DataRow(false, false, 1)]
@@ -412,7 +433,7 @@ namespace Pacman_Zagorschi_Franco
             Console.WriteLine(form.getPictureBox()[0].Visible);
             //Test
             CollectionAssert.AreEqual(new[] { picbox1, picbox2 }, new[] { form.getPictureBox()[0].Visible, form.getPictureBox()[1].Visible });
-        }
+        }*/
 
         [DataTestMethod]
         [DataRow(1, 2, 2)]
