@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Linq;
-using System.Text;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pacman_Zagorschi_Franco
@@ -568,7 +562,7 @@ namespace Pacman_Zagorschi_Franco
             if (prec4 == 1 && !g4mangiato) { if (ghost4.Left % 2 == 0) leftghost4 = ghost4velocity; ghost4.Image = Properties.Resources.gdx; }
             if (prec4 == 2 && !g4mangiato) { if (ghost4.Left % 2 == 0) leftghost4 = -ghost4velocity; ghost4.Image = Properties.Resources.gsx; }
             if (prec4 == 3 && !g4mangiato) { if (ghost4.Top % 2 == 0) topghost4 = -ghost4velocity; ghost4.Image = Properties.Resources.gup; }
-            if (prec4 == 4&& !g4mangiato) { if (ghost4.Top % 2 == 0) topghost4 = ghost4velocity; ghost1.Image = Properties.Resources.gdown; }
+            if (prec4 == 4 && !g4mangiato) { if (ghost4.Top % 2 == 0) topghost4 = ghost4velocity; ghost1.Image = Properties.Resources.gdown; }
         }
 
         //timer8
@@ -871,7 +865,7 @@ namespace Pacman_Zagorschi_Franco
                 if (pacman.Bounds.IntersectsWith(ghost4.Bounds) && !Supermod4) mangiato();
                 if (Supermod)
                 {
-                    if (pacman.Bounds.IntersectsWith(ghost1.Bounds) && !Supermod1) mangiato(); 
+                    if (pacman.Bounds.IntersectsWith(ghost1.Bounds) && !Supermod1) mangiato();
                     if (pacman.Bounds.IntersectsWith(ghost2.Bounds) && !Supermod2) mangiato();
                     if (pacman.Bounds.IntersectsWith(ghost3.Bounds) && !Supermod3) mangiato();
                     if (pacman.Bounds.IntersectsWith(ghost4.Bounds) && !Supermod4) mangiato();
@@ -1052,10 +1046,10 @@ namespace Pacman_Zagorschi_Franco
                 while (!dir1)
                 {
                     random1 = rand.Next(1, 5);
-                    if (random1 == 1 && !dir1 && random1 != prec1) if (i == 1) { leftghost1 = -ghost1velocity; dir1 = true; if (!Supermod1 && ghost1puomangiare) ghost1.Image = Properties.Resources.rsx; else if (!tresec || g1mangiato) { if (!tresec) ghost1.Image = Properties.Resources.crazy; if(g1mangiato) ghost1.Image = Properties.Resources.msx; } else ghost1.Image = Properties.Resources.tempo; }
+                    if (random1 == 1 && !dir1 && random1 != prec1) if (i == 1) { leftghost1 = -ghost1velocity; dir1 = true; if (!Supermod1 && ghost1puomangiare) ghost1.Image = Properties.Resources.rsx; else if (!tresec || g1mangiato) { if (!tresec) ghost1.Image = Properties.Resources.crazy; if (g1mangiato) ghost1.Image = Properties.Resources.msx; } else ghost1.Image = Properties.Resources.tempo; }
                     if (random1 == 2 && !dir1 && random1 != prec1) if (y == 1) { leftghost1 = ghost1velocity; dir1 = true; if (!Supermod1 && ghost1puomangiare) ghost1.Image = Properties.Resources.rdx; else if (!tresec || g1mangiato) { if (!tresec) ghost1.Image = Properties.Resources.crazy; if (g1mangiato) ghost1.Image = Properties.Resources.mdx; } else ghost1.Image = Properties.Resources.tempo; }
                     if (random1 == 3 && !dir1 && random1 != prec1) if (m == 1) { topghost1 = ghost1velocity; dir1 = true; if (!Supermod1 && ghost1puomangiare) ghost1.Image = Properties.Resources.rdown; else if (!tresec || g1mangiato) { if (!tresec) ghost1.Image = Properties.Resources.crazy; if (g1mangiato) ghost1.Image = Properties.Resources.mdown; } else ghost1.Image = Properties.Resources.tempo; }
-                    if (random1 == 4 && !dir1 && random1 != prec1) if (n == 1) { topghost1 = -ghost1velocity; dir1 = true; if (!Supermod1 && ghost1puomangiare ) ghost1.Image = Properties.Resources.rup; else if (!tresec || g1mangiato) { if (!tresec) ghost1.Image = Properties.Resources.crazy; if (g1mangiato) ghost1.Image = Properties.Resources.mup1; } else ghost1.Image = Properties.Resources.tempo; }
+                    if (random1 == 4 && !dir1 && random1 != prec1) if (n == 1) { topghost1 = -ghost1velocity; dir1 = true; if (!Supermod1 && ghost1puomangiare) ghost1.Image = Properties.Resources.rup; else if (!tresec || g1mangiato) { if (!tresec) ghost1.Image = Properties.Resources.crazy; if (g1mangiato) ghost1.Image = Properties.Resources.mup1; } else ghost1.Image = Properties.Resources.tempo; }
                 }
                 if (random1 == 1) prec1 = 2;
                 if (random1 == 2) prec1 = 1;
@@ -1082,10 +1076,10 @@ namespace Pacman_Zagorschi_Franco
                 while (!dir2)
                 {
                     random2 = rand.Next(1, 5);
-                    if (random2 == 1 && !dir2 && random2 != prec2) if (i == 1) { leftghost2 = -ghost2velocity; dir2 = true; if (!Supermod2 && ghost2puomangiare ) ghost2.Image = Properties.Resources.asx; else if(!tresec || g2mangiato) { if (!tresec) ghost2.Image = Properties.Resources.crazy; if (g2mangiato) ghost2.Image = Properties.Resources.msx; } else ghost2.Image = Properties.Resources.tempo; }
-                    if (random2 == 2 && !dir2 && random2 != prec2) if (y == 1) { leftghost2 = ghost2velocity; dir2 = true; if (!Supermod2 && ghost2puomangiare ) ghost2.Image = Properties.Resources.adx; else if (!tresec || g2mangiato) { if (!tresec) ghost2.Image = Properties.Resources.crazy; if (g2mangiato) ghost2.Image = Properties.Resources.mdx; } else ghost2.Image = Properties.Resources.tempo; }
-                    if (random2 == 3 && !dir2 && random2 != prec2) if (m == 1) { topghost2 = ghost2velocity; dir2 = true; if (!Supermod2 && ghost2puomangiare ) ghost2.Image = Properties.Resources.adown; else if (!tresec || g2mangiato) { if (!tresec) ghost2.Image = Properties.Resources.crazy; if (g2mangiato) ghost2.Image = Properties.Resources.mdown; } else ghost2.Image = Properties.Resources.tempo; }
-                    if (random2 == 4 && !dir2 && random2 != prec2) if (n == 1) { topghost2 = -ghost2velocity; dir2 = true; if (!Supermod2 && ghost2puomangiare ) ghost2.Image = Properties.Resources.aup; else if (!tresec || g2mangiato) { if (!tresec) ghost2.Image = Properties.Resources.crazy; if (g2mangiato) ghost2.Image = Properties.Resources.mup1; } else ghost2.Image = Properties.Resources.tempo; }
+                    if (random2 == 1 && !dir2 && random2 != prec2) if (i == 1) { leftghost2 = -ghost2velocity; dir2 = true; if (!Supermod2 && ghost2puomangiare) ghost2.Image = Properties.Resources.asx; else if (!tresec || g2mangiato) { if (!tresec) ghost2.Image = Properties.Resources.crazy; if (g2mangiato) ghost2.Image = Properties.Resources.msx; } else ghost2.Image = Properties.Resources.tempo; }
+                    if (random2 == 2 && !dir2 && random2 != prec2) if (y == 1) { leftghost2 = ghost2velocity; dir2 = true; if (!Supermod2 && ghost2puomangiare) ghost2.Image = Properties.Resources.adx; else if (!tresec || g2mangiato) { if (!tresec) ghost2.Image = Properties.Resources.crazy; if (g2mangiato) ghost2.Image = Properties.Resources.mdx; } else ghost2.Image = Properties.Resources.tempo; }
+                    if (random2 == 3 && !dir2 && random2 != prec2) if (m == 1) { topghost2 = ghost2velocity; dir2 = true; if (!Supermod2 && ghost2puomangiare) ghost2.Image = Properties.Resources.adown; else if (!tresec || g2mangiato) { if (!tresec) ghost2.Image = Properties.Resources.crazy; if (g2mangiato) ghost2.Image = Properties.Resources.mdown; } else ghost2.Image = Properties.Resources.tempo; }
+                    if (random2 == 4 && !dir2 && random2 != prec2) if (n == 1) { topghost2 = -ghost2velocity; dir2 = true; if (!Supermod2 && ghost2puomangiare) ghost2.Image = Properties.Resources.aup; else if (!tresec || g2mangiato) { if (!tresec) ghost2.Image = Properties.Resources.crazy; if (g2mangiato) ghost2.Image = Properties.Resources.mup1; } else ghost2.Image = Properties.Resources.tempo; }
                 }
                 if (random2 == 1) prec2 = 2;
                 if (random2 == 2) prec2 = 1;
@@ -1114,7 +1108,7 @@ namespace Pacman_Zagorschi_Franco
                     random3 = rand.Next(1, 5);
                     if (random3 == 1 && !dir3 && random3 != prec3) if (i == 1) { leftghost3 = -ghost3velocity; dir3 = true; if (!Supermod3 && ghost3puomangiare) ghost3.Image = Properties.Resources.vsx; else if (!tresec || g3mangiato) { if (!tresec) ghost3.Image = Properties.Resources.crazy; if (g3mangiato) ghost3.Image = Properties.Resources.msx; } else ghost3.Image = Properties.Resources.tempo; }
                     if (random3 == 2 && !dir3 && random3 != prec3) if (y == 1) { leftghost3 = ghost3velocity; dir3 = true; if (!Supermod3 && ghost3puomangiare) ghost3.Image = Properties.Resources.vdx; else if (!tresec || g3mangiato) { if (!tresec) ghost3.Image = Properties.Resources.crazy; if (g3mangiato) ghost3.Image = Properties.Resources.mdx; } else ghost3.Image = Properties.Resources.tempo; }
-                    if (random3 == 3 && !dir3 && random3 != prec3) if (m == 1) { topghost3 = ghost3velocity; dir3 = true; if (!Supermod3 && ghost3puomangiare) ghost3.Image = Properties.Resources.vdown; else if(!tresec || g3mangiato) { if (!tresec) ghost3.Image = Properties.Resources.crazy; if (g3mangiato) ghost3.Image = Properties.Resources.mdown; } else ghost3.Image = Properties.Resources.tempo; }
+                    if (random3 == 3 && !dir3 && random3 != prec3) if (m == 1) { topghost3 = ghost3velocity; dir3 = true; if (!Supermod3 && ghost3puomangiare) ghost3.Image = Properties.Resources.vdown; else if (!tresec || g3mangiato) { if (!tresec) ghost3.Image = Properties.Resources.crazy; if (g3mangiato) ghost3.Image = Properties.Resources.mdown; } else ghost3.Image = Properties.Resources.tempo; }
                     if (random3 == 4 && !dir3 && random3 != prec3) if (n == 1) { topghost3 = -ghost3velocity; dir3 = true; if (!Supermod3 && ghost3puomangiare) ghost3.Image = Properties.Resources.vup; else if (!tresec || g3mangiato) { if (!tresec) ghost3.Image = Properties.Resources.crazy; if (g3mangiato) ghost3.Image = Properties.Resources.mup1; } else ghost3.Image = Properties.Resources.tempo; }
                 }
                 if (random3 == 1) prec3 = 2;
