@@ -318,6 +318,21 @@ namespace Pacman_Zagorschi_Franco
         }
 
         [TestMethod]
+        public void timer8_Tick_test()
+        {
+            {
+                //Set
+                var form = new Pacman_Zagorschi_Franco.Form1();
+
+                //Execute
+                form.timer8_Tick(null, null);
+
+                //Check
+                CollectionAssert.AreEqual(new[] { form.timer8.Enabled }, new[] { false });
+            }
+        }
+
+        [TestMethod]
         public void timer7_Tick_timer7_false_panel1_true_attendo_true()
         {
             //Set
@@ -1034,6 +1049,8 @@ namespace Pacman_Zagorschi_Franco
             form.g1mangiato = b;
             form.ghost4.Left = 2;
         }
+
+
 
 
         [DataTestMethod]
