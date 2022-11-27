@@ -1,8 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.IO;
 using System.Windows.Forms;
 
 namespace Pacman_Zagorschi_Franco
@@ -153,27 +151,15 @@ namespace Pacman_Zagorschi_Franco
         }
 
         [TestMethod]
-        public void button1_MouseEnter_resource_equals_playgame2()
+        public void button1_MouseEnter_equals_playgame2()
         {
-            //Set
-            var path = Directory.GetCurrentDirectory().ToString().Replace("\\bin\\Release", "");
-            path = path.Replace("\\bin\\Debug", "");
-            Image image = Image.FromFile(path + "\\Resources\\playgame2.bmp");
+            // set
             var form = new Pacman_Zagorschi_Franco.Form1();
-            form.button1_MouseEnter(null, null);
+            object sender = null;
+            EventArgs e = null;
 
-            //Execute
-            var x = (System.Drawing.Bitmap)image;
-            var y = form.Get_Button1_Image();
-
-            if (x.Height != y.Height || x.Width != y.Width) Assert.Fail();
-            for (int i = 0; i < x.Width; i++)
-            {
-                for (int j = 0; j < x.Height; j++)
-                {
-                    if (x.GetPixel(i, j) != y.GetPixel(i, j)) Assert.Fail();
-                }
-            }
+            // act
+            form.button1_MouseEnter(sender, e);
         }
 
         [TestMethod]
