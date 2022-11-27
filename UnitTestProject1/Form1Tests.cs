@@ -19,6 +19,25 @@ namespace Pacman_Zagorschi_Franco
         }
 
         [TestMethod]
+        [DeploymentItem("Pacman_Zagorschi_Franco.exe")]
+        public void button1_click_reset_allGame()
+        {
+            // act
+            var form = new Pacman_Zagorschi_Franco.Form1();
+            object sender = null;
+            EventArgs e = null;
+            form.button1_Click(sender, e);
+
+            bool ifStart = false;
+            bool isPanel1Visible = false;
+
+            // assert
+            Assert.AreEqual(form.start, ifStart);
+            Assert.AreEqual(form.panel1.Visible, isPanel1Visible);
+
+        }
+
+        [TestMethod]
         public void button1_MouseLeave_resource_equals_playgame()
         {
             //Set
