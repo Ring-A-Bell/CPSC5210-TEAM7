@@ -164,6 +164,18 @@ namespace Pacman_Zagorschi_Franco
             form.button1_MouseEnter(sender, e);
         }
 
+
+        [TestMethod]
+        public void Get_Button1_Image_resourse_buttonImage()
+        {
+            // set
+            var form = new Pacman_Zagorschi_Franco.Form1();
+
+            // act
+            var bitmap = form.Get_Button1_Image();
+            Assert.AreEqual(bitmap, form.button1.Image);
+        }
+
         [TestMethod]
         public void finepartita_timers1to6_false_powermod_false_timer7_true()
         {
