@@ -344,6 +344,22 @@ namespace Pacman_Zagorschi_Franco
             CollectionAssert.AreEqual(new[] { form.timer7.Enabled }, new[] { false });
         }
 
+        [TestMethod]
+        public void getPictureBox()
+        {
+            //Set
+            var form = new Pacman_Zagorschi_Franco.Form1();
+
+            //Execute
+            PictureBox[] result = form.getPictureBox();
+
+            //Check
+            result[1].SizeMode = PictureBoxSizeMode.StretchImage;
+            Assert.AreEqual(result[1].SizeMode, form.pictureBox3.SizeMode);
+        }
+
+
+
 
         // Have to use a test stub here
         [TestMethod]
