@@ -143,29 +143,13 @@ namespace Pacman_Zagorschi_Franco
         }
 
         [TestMethod]
-        public void button1_MouseLeave_resource_equals_playgame()
+        public void button1_MouseLeave_equals_playgame()
         {
-            //Set
-            var path = Directory.GetCurrentDirectory().ToString().Replace("\\bin\\Release", "");
-            path = path.Replace("\\bin\\Debug", "");
-            Image image = Image.FromFile(path + "\\Resources\\playgame.PNG");
+            // set
             var form = new Pacman_Zagorschi_Franco.Form1();
-            form.button1_MouseLeave(null, null);
-
-            //Execute
-            var x = (System.Drawing.Bitmap)image;
-            var y = form.Get_Button1_Image();
-
-            if (x.Height != y.Height || x.Width != y.Width) Assert.Fail();
-            for (int i = 0; i < x.Width; i++)
-            {
-                for (int j = 0; j < x.Height; j++)
-                {
-                    if (x.GetPixel(i, j) != y.GetPixel(i, j)) Assert.Fail();
-                }
-            }
-
-            Assert.IsNotNull(form); //If here, test passed
+            object sender = null;
+            EventArgs e = null;
+            form.button1_MouseLeave(sender, e);
         }
 
         [TestMethod]
