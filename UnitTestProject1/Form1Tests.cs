@@ -64,6 +64,18 @@ namespace Pacman_Zagorschi_Franco
             accessor.Invoke("pictureBox5_Click", sender, e);
         }
 
+        [TestMethod]
+        public void label255_Click_privateMethod_null()
+        {
+            // set
+            var form = new Pacman_Zagorschi_Franco.Form1();
+            object sender = null;
+            EventArgs e = null;
+            PrivateObject accessor = new PrivateObject(form);
+
+            // act
+            accessor.Invoke("label255_Click", sender, e);
+        }
 
 
         [TestMethod]
