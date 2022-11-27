@@ -1,10 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Windows;
 using System;
-using System.Reflection;
-using System.IO;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Pacman_Zagorschi_Franco
@@ -17,7 +15,7 @@ namespace Pacman_Zagorschi_Franco
         {
             var form = new Pacman_Zagorschi_Franco.Form1();
             Assert.IsNotNull(form);
-            
+
         }
 
         [TestMethod]
@@ -26,10 +24,10 @@ namespace Pacman_Zagorschi_Franco
             //Set
             var path = Directory.GetCurrentDirectory().ToString().Replace("\\bin\\Release", "");
             path = path.Replace("\\bin\\Debug", "");
-            Image image = Image.FromFile(path+"\\Resources\\playgame.PNG");
+            Image image = Image.FromFile(path + "\\Resources\\playgame.PNG");
             var form = new Pacman_Zagorschi_Franco.Form1();
             form.button1_MouseLeave(null, null);
-            
+
             //Execute
             var x = (System.Drawing.Bitmap)image;
             var y = form.Get_Button1_Image();
@@ -74,7 +72,7 @@ namespace Pacman_Zagorschi_Franco
         public void finepartita_timers1to6_false_powermod_false_timer7_true()
         {
             //Set
-            var form  = new Pacman_Zagorschi_Franco.Form1();
+            var form = new Pacman_Zagorschi_Franco.Form1();
 
             //Execute
             form.finepartita();
@@ -99,8 +97,8 @@ namespace Pacman_Zagorschi_Franco
             };
 
             //Check
-            CollectionAssert.AreEqual(intResults, new[]{ 0,3});
-            CollectionAssert.AreEqual(boolResults, new[]{ false,false,false,false,false,false,false,false,true });
+            CollectionAssert.AreEqual(intResults, new[] { 0, 3 });
+            CollectionAssert.AreEqual(boolResults, new[] { false, false, false, false, false, false, false, false, true });
 
         }
 
@@ -128,12 +126,12 @@ namespace Pacman_Zagorschi_Franco
             form.powermod1_Tick(null, null);
 
             //Check
-            CollectionAssert.AreEqual(new[] { form.tresec, form.powermod1.Enabled}, new[] { true, false });
+            CollectionAssert.AreEqual(new[] { form.tresec, form.powermod1.Enabled }, new[] { true, false });
         }
 
         [DataTestMethod]
         [DynamicData(nameof(ControlData), DynamicDataSourceType.Property)]
-        public void control_timer3_false_timer4_true_c_false_timer5_true(int position, bool[] expected )
+        public void control_timer3_false_timer4_true_c_false_timer5_true(int position, bool[] expected)
         {
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
@@ -159,8 +157,8 @@ namespace Pacman_Zagorschi_Franco
         //i = input
         //e = expected
         [DataTestMethod]
-        [DataRow(false, false, false, false,false, false, false, false)]
-        [DataRow(false, false, false, true,false, false, false, true)]
+        [DataRow(false, false, false, false, false, false, false, false)]
+        [DataRow(false, false, false, true, false, false, false, true)]
         [DataRow(false, false, true, false, false, false, true, false)]
         [DataRow(false, false, true, true, false, false, true, true)]
         [DataRow(false, true, false, false, false, true, false, false)]
@@ -175,7 +173,7 @@ namespace Pacman_Zagorschi_Franco
         [DataRow(true, true, false, true, true, true, false, true)]
         [DataRow(true, true, true, false, true, true, true, false)]
         [DataRow(true, true, true, true, true, true, true, true)]
-        public void supermod2(bool i1, bool i2, bool i3, bool i4, bool e1, bool e2, bool e3, bool e4) 
+        public void supermod2(bool i1, bool i2, bool i3, bool i4, bool e1, bool e2, bool e3, bool e4)
         {
             //Set
             bool[] result = new bool[4];
@@ -193,7 +191,7 @@ namespace Pacman_Zagorschi_Franco
             result[3] = form.g4mangiato;
 
             //Check
-            CollectionAssert.AreEqual(result, new[] {e1,e2,e3,e4});
+            CollectionAssert.AreEqual(result, new[] { e1, e2, e3, e4 });
         }
 
         //Tests fail for some reason. Looking into later
@@ -400,6 +398,7 @@ namespace Pacman_Zagorschi_Franco
 
         [DataRow(48, 328)]
         [DataRow(48, 292)]
+        [DataRow(48, 0)]
 
         [DataRow(84, 364)]
         [DataRow(84, 328)]
@@ -432,17 +431,145 @@ namespace Pacman_Zagorschi_Franco
         [DataRow(156, 148)]
         [DataRow(156, 220)]
 
+        [DataRow(192, 292)]
+        [DataRow(192, 256)]
         [DataRow(192, 364)]
+        [DataRow(192, 328)]
+        [DataRow(192, 28)]
+        [DataRow(192, 76)]
+        [DataRow(192, 112)]
+        [DataRow(192, 148)]
+        [DataRow(192, 0)]
 
-        [DataRow(120, 328)]
-        [DataRow(120, 292)]
-        [DataRow(120, 256)]
-        [DataRow(120, 112)]
-        [DataRow(120, 184)]
-        [DataRow(120, 76)]
-        [DataRow(120, 28)]
-        [DataRow(120, 148)]
-        [DataRow(120, 220)]
+        [DataRow(228, 328)]
+        [DataRow(228, 292)]
+        [DataRow(228, 256)]
+        [DataRow(228, 112)]
+        [DataRow(228, 184)]
+        [DataRow(228, 76)]
+        [DataRow(228, 112)]
+        [DataRow(228, 28)]
+        [DataRow(228, 148)]
+        [DataRow(228, 220)]
+
+        [DataRow(264, 256)]
+        [DataRow(264, 292)]
+        [DataRow(264, 328)]
+        [DataRow(264, 184)]
+        [DataRow(264, 112)]
+        [DataRow(264, 28)]
+        [DataRow(264, 76)]
+        [DataRow(264, 88)]
+
+        [DataRow(324, 256)]
+        [DataRow(324, 292)]
+        [DataRow(324, 328)]
+        [DataRow(324, 364)]
+        [DataRow(324, 112)]
+        [DataRow(324, 76)]
+        [DataRow(324, 28)]
+        [DataRow(324, 99)]
+
+        [DataRow(300, 292)]
+        [DataRow(300, 328)]
+        [DataRow(300, 0)]
+
+        [DataRow(374, 184)]
+        [DataRow(374, 0)]
+
+        [DataRow(-26, 184)]
+        [DataRow(-26, 0)]
+
+        [DataRow(26, 366)]
+        [DataRow(26, 330)]
+        [DataRow(26, 294)]
+        [DataRow(26, 258)]
+        [DataRow(26, 114)]
+        [DataRow(26, 78)]
+        [DataRow(26, 30)]
+        [DataRow(26, 0)]
+
+        [DataRow(50, 330)]
+        [DataRow(50, 294)]
+        [DataRow(50, 0)]
+
+        [DataRow(86, 258)]
+        [DataRow(86, 330)]
+        [DataRow(86, 294)]
+        [DataRow(86, 186)]
+        [DataRow(86, 114)]
+        [DataRow(86, 30)]
+        [DataRow(86, 78)]
+        [DataRow(86, 0)]
+
+        [DataRow(122, 294)]
+        [DataRow(122, 330)]
+        [DataRow(122, 258)]
+        [DataRow(122, 222)]
+        [DataRow(122, 78)]
+        [DataRow(122, 114)]
+        [DataRow(122, 150)]
+        [DataRow(122, 186)]
+        [DataRow(122, 0)]
+
+        [DataRow(158, 330)]
+        [DataRow(158, 366)]
+        [DataRow(158, 258)]
+        [DataRow(158, 294)]
+        [DataRow(158, 78)]
+        [DataRow(158, 114)]
+        [DataRow(158, 150)]
+        [DataRow(158, 30)]
+        [DataRow(158, 0)]
+
+        [DataRow(194, 294)]
+        [DataRow(194, 258)]
+        [DataRow(194, 366)]
+        [DataRow(194, 330)]
+        [DataRow(194, 30)]
+        [DataRow(194, 78)]
+        [DataRow(194, 114)]
+        [DataRow(194, 150)]
+        [DataRow(194, 0)]
+
+        [DataRow(230, 258)]
+        [DataRow(230, 330)]
+        [DataRow(230, 294)]
+        [DataRow(230, 222)]
+        [DataRow(230, 186)]
+        [DataRow(230, 78)]
+        [DataRow(230, 114)]
+        [DataRow(230, 150)]
+        [DataRow(230, 0)]
+
+        [DataRow(266, 258)]
+        [DataRow(266, 294)]
+        [DataRow(266, 330)]
+        [DataRow(266, 186)]
+        [DataRow(266, 114)]
+        [DataRow(266, 30)]
+        [DataRow(266, 78)]
+        [DataRow(266, 0)]
+
+        [DataRow(326, 258)]
+        [DataRow(326, 294)]
+        [DataRow(326, 330)]
+        [DataRow(326, 366)]
+        [DataRow(326, 114)]
+        [DataRow(326, 78)]
+        [DataRow(326, 30)]
+        [DataRow(326, 0)]
+
+        [DataRow(302, 294)]
+        [DataRow(302, 330)]
+        [DataRow(302, 0)]
+
+        [DataRow(376, 186)]
+        [DataRow(376, 0)]
+
+        [DataRow(-28, 186)]
+        [DataRow(-28, 0)]
+
         public void testCrossRoads_functionA(int left, int top)
         {
             //Set
@@ -450,6 +577,9 @@ namespace Pacman_Zagorschi_Franco
 
             //Execute
             form.pacturn = true;
+            form.a(left, top);
+
+            form.pacturn = false;
             form.a(left, top);
 
             //Test
