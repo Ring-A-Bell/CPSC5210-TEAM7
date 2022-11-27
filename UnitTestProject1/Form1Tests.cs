@@ -104,6 +104,19 @@ namespace Pacman_Zagorschi_Franco
         }
 
         [TestMethod]
+        public void label142_Click_privateMethod_null()
+        {
+            // set
+            var form = new Pacman_Zagorschi_Franco.Form1();
+            object sender = null;
+            EventArgs e = null;
+            PrivateObject accessor = new PrivateObject(form);
+
+            // act
+            accessor.Invoke("label142_Click", sender, e);
+        }
+
+        [TestMethod]
         public void button1_MouseLeave_resource_equals_playgame()
         {
             //Set
