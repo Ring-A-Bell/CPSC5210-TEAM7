@@ -435,6 +435,52 @@ namespace Pacman_Zagorschi_Franco
             CollectionAssert.AreEqual(new[] { picbox1, picbox2 }, new[] { form.getPictureBox()[0].Visible, form.getPictureBox()[1].Visible });
         }*/
 
+        [TestMethod]
+        public void collision()
+        {
+            //Set
+            var form = new Pacman_Zagorschi_Franco.Form1();
+
+            //Execute
+            form.collision();
+
+            //Check
+            CollectionAssert.AreEqual(new[] { form.timer1.Enabled, form.timer2.Enabled, form.timer3.Enabled,
+                form.timer4.Enabled, form.timer5.Enabled, form.timer6.Enabled, form.timer7.Enabled, form.timer8.Enabled, form.timer9.Enabled}, new[] { false, false, false, false, false, false, false, false, true });
+        }
+
+
+        [TestMethod]
+        [DataRow(-1)]
+        [DataRow(1)]
+        [DataRow(2)]
+        public void mangiato(int _vita)
+        {
+            // Set
+            var form = new Pacman_Zagorschi_Franco.Form1();
+
+            // Execute
+            form.mangiato();
+
+            // Check
+            form.vita = _vita;
+            if (_vita == -1 || _vita == 0)
+            {
+                Assert.AreEqual(form.vita, _vita);
+
+
+            }
+
+
+            if (_vita == -1 || _vita == 100)
+            {
+                Assert.AreEqual(form.vita, _vita);
+
+            }
+
+
+        }
+
         [DataTestMethod]
         [DataRow(1, 2, 2)]
         [DataRow(2, 1, -2)]
