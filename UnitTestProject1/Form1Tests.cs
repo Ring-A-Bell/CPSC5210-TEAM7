@@ -714,14 +714,33 @@ namespace Pacman_Zagorschi_Franco
         }
 
         [TestMethod]
-        public void test_timer1_Tick()
+        [DataRow(true, true, true, true)]
+        [DataRow(true, true, true, false)]
+        [DataRow(true, true, false, true)]
+        [DataRow(true, true, false, false)]
+        [DataRow(true, false, true, true)]
+        [DataRow(true, false, true, false)]
+        [DataRow(true, false, false, true)]
+        [DataRow(true, false, false, false)]
+        [DataRow(false, true, true, true)]
+        [DataRow(false, true, true, false)]
+        [DataRow(false, true, false, true)]
+        [DataRow(false, true, false, false)]
+        [DataRow(false, false, true, true)]
+        [DataRow(false, false, true, false)]
+        [DataRow(false, false, false, true)]
+        [DataRow(false, false, false, false)]
+        public void timer1_Tick_defaultMode_game_running(bool b1, bool b2, bool b3, bool b4)
         {
             //Setup
             var form = new Pacman_Zagorschi_Franco.Form1();
 
             //Execute
-            form.getPacman().Enabled = true;
-            form.ghost4.Enabled = true;
+
+            form.ghost1.Enabled = b1;
+            form.ghost2.Enabled = b2;
+            form.ghost3.Enabled = b3;
+            form.ghost4.Enabled = b4;
             form.c = true;
             form.timer1_Tick(null, null);
 
