@@ -926,6 +926,116 @@ namespace Pacman_Zagorschi_Franco
             }
         }
 
+
+        [TestMethod]
+        [DataRow(1, 2, 3, 4, true)]
+        [DataRow(1, 2, 3, 4, false)]
+        [DataRow(-1, -2, -3, -4, true)]
+        [DataRow(-1, -2, -3, -4, false)]
+        public void powermod_tick_enable_ghost_notEating(int c1, int c2, int c3, int c4, bool b)
+        {
+            var form = new Pacman_Zagorschi_Franco.Form1();
+            object sender = null;
+            EventArgs e = null;
+            form.powermod_Tick(sender, e);
+            form.tresec = false;
+
+            form.g1mangiato = false;
+            Assert.IsFalse(form.v1);
+            Assert.IsTrue(form.ghost1puomangiare);
+            Assert.IsFalse(form.Supermod1);
+            Assert.AreEqual(form.ghost1velocity, 2);
+
+            form.g2mangiato = false;
+            Assert.IsFalse(form.v2);
+            Assert.IsTrue(form.ghost2puomangiare);
+            Assert.IsFalse(form.Supermod2);
+            Assert.AreEqual(form.ghost2velocity, 2);
+
+            form.g3mangiato = false;
+            Assert.IsFalse(form.v3);
+            Assert.IsTrue(form.ghost3puomangiare);
+            Assert.IsFalse(form.Supermod3);
+            Assert.AreEqual(form.ghost3velocity, 2);
+
+            form.g4mangiato = false;
+            Assert.IsFalse(form.v4);
+            Assert.IsTrue(form.ghost4puomangiare);
+            Assert.IsFalse(form.Supermod4);
+            Assert.AreEqual(form.ghost4velocity, 2);
+
+            // prec1
+
+            form.prec1 = c1;
+            form.g1mangiato = b;
+            form.ghost1.Left = 2;
+
+            form.prec1 = c2;
+            form.g1mangiato = b;
+            form.ghost1.Left = 2;
+
+            form.prec1 = c3;
+            form.g1mangiato = b;
+            form.ghost1.Left = 2;
+
+            form.prec1 = c4;
+            form.g1mangiato = b;
+            form.ghost1.Left = 2;
+
+
+            //prec2
+            form.prec2 = c1;
+            form.g1mangiato = b;
+            form.ghost2.Left = 2;
+
+            form.prec2 = c2;
+            form.g1mangiato = b;
+            form.ghost2.Left = 2;
+
+            form.prec2 = c3;
+            form.g1mangiato = b;
+            form.ghost2.Left = 2;
+
+            form.prec2 = c4;
+            form.g1mangiato = b;
+            form.ghost2.Left = 2;
+
+            //prec3
+            form.prec3 = c1;
+            form.g1mangiato = b;
+            form.ghost3.Left = 2;
+
+            form.prec3 = c2;
+            form.g1mangiato = b;
+            form.ghost3.Left = 2;
+
+            form.prec3 = c3;
+            form.g1mangiato = b;
+            form.ghost3.Left = 2;
+
+            form.prec3 = c4;
+            form.g1mangiato = b;
+            form.ghost3.Left = 2;
+
+            //prec4
+            form.prec4 = c1;
+            form.g1mangiato = b;
+            form.ghost4.Left = 2;
+
+            form.prec4 = c2;
+            form.g1mangiato = b;
+            form.ghost4.Left = 2;
+
+            form.prec4 = c3;
+            form.g1mangiato = b;
+            form.ghost4.Left = 2;
+
+            form.prec4 = c4;
+            form.g1mangiato = b;
+            form.ghost4.Left = 2;
+        }
+
+
         [DataTestMethod]
         [DataRow(31, 298)]
         [DataRow(28, 54)]
