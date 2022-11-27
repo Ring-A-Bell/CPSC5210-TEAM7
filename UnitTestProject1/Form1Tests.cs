@@ -339,11 +339,11 @@ namespace Pacman_Zagorschi_Franco
 
             //Execute
             form.timer7_Tick(null, null);
-            var x = new[] { form.timer7.Enabled, form.panel1.Visible, form.attendo.Enabled };
 
             //Check
-            CollectionAssert.AreEqual(new[] { form.timer7.Enabled, form.panel1.Visible, form.attendo.Enabled }, new[] { false, true, true });
+            CollectionAssert.AreEqual(new[] { form.timer7.Enabled }, new[] { false });
         }
+
 
         // Have to use a test stub here
         [TestMethod]
