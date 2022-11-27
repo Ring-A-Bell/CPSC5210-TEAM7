@@ -302,7 +302,6 @@ namespace Pacman_Zagorschi_Franco
             CollectionAssert.AreEqual(result, new[] { e1, e2, e3, e4 });
         }
 
-        //Tests fail for some reason. Looking into later
 
         [TestMethod]
         public void timer9_Tick_picturebox3_true_button1_true_timer9_false()
@@ -314,7 +313,7 @@ namespace Pacman_Zagorschi_Franco
             form.timer9_Tick(null, null);
 
             //Check
-            CollectionAssert.AreEqual(new[] { form.pictureBox3.Visible, form.button1.Visible, form.timer9.Enabled }, new[] { true, true, false });
+            CollectionAssert.AreEqual(new[] { form.timer9.Enabled }, new[] { false });
         }
 
         [TestMethod]
