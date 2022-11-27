@@ -147,6 +147,8 @@ namespace Pacman_Zagorschi_Franco
             var form = new Pacman_Zagorschi_Franco.Form1();
             object sender = null;
             EventArgs e = null;
+
+            // act
             form.button1_MouseLeave(sender, e);
         }
 
