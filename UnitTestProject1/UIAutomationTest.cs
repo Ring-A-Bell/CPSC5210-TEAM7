@@ -10,7 +10,7 @@ namespace UnitTestProject1
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void autoplay_pacman()
         {
             // Open the windows application driver
             System.Diagnostics.Process.Start(@"C:\\Program Files (x86)\\Windows Application Driver\\WinAppDriver.exe");
@@ -19,7 +19,6 @@ namespace UnitTestProject1
             AppiumOptions options = new AppiumOptions();
             options.AddAdditionalCapability("app", @"C:\\Users\\Youjin Li\\Desktop\\GitRepo\\CPSC5210-TEAM7\\Pacman_Zagorschi_Franco\\bin\\Debug\\Pacman_Zagorschi_Franco.exe");
             options.AddAdditionalCapability("deviceName", "WindowsPC");
-
 
             var driver = new WindowsDriver<WindowsElement>
                 (new Uri("http://127.0.0.1:4723"), options);
@@ -37,10 +36,8 @@ namespace UnitTestProject1
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Right);
             Thread.Sleep(1000);
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Up);
-
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Left);
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Up);
-
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Up);
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Right);
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Up);
@@ -48,15 +45,16 @@ namespace UnitTestProject1
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Up);
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Right);
 
+            // 2 life left here 
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Up);
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Left);
-
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Right);
-
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Up);
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Left);
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Up);
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Right);
+
+            // 1 life left here
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Up);
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Left);
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Right);
@@ -68,9 +66,38 @@ namespace UnitTestProject1
             driver.Keyboard.PressKey(OpenQA.Selenium.Keys.Up);
             Thread.Sleep(5000);
 
+            // close the session
+            driver.Close();
+        }
+
+        [TestMethod]
+        public void start_game_show_authorName()
+        {
+            // Open the windows application driver
+            System.Diagnostics.Process.Start(@"C:\\Program Files (x86)\\Windows Application Driver\\WinAppDriver.exe");
+
+            // Create a new session to bring up the test application
+            AppiumOptions options = new AppiumOptions();
+            options.AddAdditionalCapability("app", @"C:\\Users\\Youjin Li\\Desktop\\GitRepo\\CPSC5210-TEAM7\\Pacman_Zagorschi_Franco\\bin\\Debug\\Pacman_Zagorschi_Franco.exe");
+            options.AddAdditionalCapability("deviceName", "WindowsPC");
+
+            var driver = new WindowsDriver<WindowsElement>
+                (new Uri("http://127.0.0.1:4723"), options);
+
+            Thread.Sleep(1000);
+
+            // Test if the welcome panel successfuly launched
+            var res = driver.FindElementByAccessibilityId("label142").Text;
+            Assert.AreEqual(res, "Muhammad Akbar Priambodo ");
+
+            // Start the game
+            driver.FindElementByAccessibilityId("button1").Click();
+
 
             // close the session
             driver.Close();
         }
+
+
     }
 }
