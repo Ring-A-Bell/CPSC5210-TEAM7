@@ -570,17 +570,18 @@ namespace Pacman_Zagorschi_Franco
             CollectionAssert.AreEqual(new[] { ghostLeftSum, ghostTopSum, ghostLeftSum, ghostTopSum, ghostLeftSum, ghostTopSum, ghostLeftSum, ghostTopSum }, new[] { form.ghost1.Left, form.ghost1.Top, form.ghost2.Left, form.ghost2.Top, form.ghost3.Left, form.ghost3.Top, form.ghost4.Left, form.ghost4.Top });
         }
 
-        [TestMethod]
-        public void testDirection()
+        [DataTestMethod]
+        [DataRow(100, 20, 200, 40)]
+        public void testDirection(int pacmanLeft, int left, int pacmanTop, int top)
         {
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
             //Execute
-            int left = form.left;
-            int pacmanLeft = form.getPacman().Left;
-            int top = form.top;
-            int pacmanTop = form.getPacman().Top;
+            form.left = left;
+            form.getPacman().Left = pacmanLeft;
+            form.top = top;
+            form.getPacman().Top = pacmanTop;
 
             form.direction();
 
