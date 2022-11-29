@@ -36,3 +36,12 @@ C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\UnitTestProject1\obj\Debug\Pac
 C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\UnitTestProject1\obj\Debug\PacmanTests.csproj.CopyComplete
 C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\UnitTestProject1\bin\Debug\Appium.Net.dll
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\UnitTestProject1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\UnitTestProject1\bin\Debug\SeleniumExtras.PageObjects.dll
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\UnitTestProject1\bin\Debug\WebDriver.dll
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\UnitTestProject1\bin\Debug\WebDriver.Support.dll
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\UnitTestProject1\bin\Debug\Appium.Net.xml
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\UnitTestProject1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\UnitTestProject1\bin\Debug\WebDriver.xml
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\UnitTestProject1\bin\Debug\WebDriver.Support.xml

@@ -20,3 +20,15 @@ C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\obj\De
 C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\obj\Debug\Pacman.csproj.CoreCompileInputs.cache
 C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\obj\Debug\Pacman_Zagorschi_Franco.exe
 C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\obj\Debug\Pacman_Zagorschi_Franco.pdb
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\bin\Debug\Appium.Net.dll
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\bin\Debug\Castle.Core.dll
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\bin\Debug\SeleniumExtras.PageObjects.dll
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\bin\Debug\WebDriver.dll
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\bin\Debug\WebDriver.Support.dll
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\bin\Debug\Appium.Net.xml
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\bin\Debug\Castle.Core.xml
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\bin\Debug\WebDriver.xml
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\bin\Debug\WebDriver.Support.xml
+C:\Users\Youjin Li\Desktop\GitRepo\CPSC5210-TEAM7\Pacman_Zagorschi_Franco\obj\Debug\Pacman.csproj.CopyComplete
