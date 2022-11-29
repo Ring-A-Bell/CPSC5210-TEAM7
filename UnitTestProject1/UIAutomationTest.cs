@@ -4,7 +4,7 @@ using OpenQA.Selenium.Appium.Windows;
 using System;
 using System.Threading;
 
-namespace UnitTestProject1
+namespace UITest
 {
     [TestClass]
     public class UIAutomationTest
