@@ -7,17 +7,15 @@
 call "D:\Program Files\Microsoft Visual Studio\VC\Auxiliary\Build\vcvarsall.bat" x86
 
 :: Switch directory to the project
-D:
-cd D:\Git_Projects\CPSC5210-TEAM7\
 @echo off
 set /p email=Enter Email to Send Results To:
 
 :: Build the project solution and log the results
-msbuild.exe D:\Git_Projects\CPSC5210-TEAM7\Pacman.sln -fileLogger
+msbuild.exe %cd%\Pacman.sln -fileLogger
 SET buildResults=%cd%\msbuild.log
 
 :: Run all project tests and log the results
-vstest.console.exe D:\Git_Projects\CPSC5210-TEAM7\UnitTestProject1\bin\Debug\UnitTestProject1.dll /TestAdapterPath:D:\Git_Projects\CPSC5210-TEAM7\packages\MSTest.TestAdapter.2.2.10\build\_common /logger:trx
+vstest.console.exe %cd%\UnitTestProject1\bin\Debug\UnitTestProject1.dll /TestAdapterPath:%cd%\packages\MSTest.TestAdapter.2.2.10\build\_common /logger:trx
 
 cd TestResults
 for /f %i in ('dir /b/a-d/od/t:c') do set latestTest=%i
