@@ -287,7 +287,7 @@ namespace Pacman_Zagorschi_Franco
         [DataRow(true, true, false, true, true, true, false, true)]
         [DataRow(true, true, true, false, true, true, true, false)]
         [DataRow(true, true, true, true, true, true, true, true)]
-        public void supermod2(bool i1, bool i2, bool i3, bool i4, bool e1, bool e2, bool e3, bool e4)
+        public void supermod2_TikSupermod_shouldDisableTimer9(bool i1, bool i2, bool i3, bool i4, bool e1, bool e2, bool e3, bool e4)
         {
             //Set
             bool[] result = new bool[4];
