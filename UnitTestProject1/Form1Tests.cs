@@ -9,9 +9,12 @@ namespace Pacman_Zagorschi_Franco
     public class Form1Tests
     {
         [TestMethod]
-        public void Load_Form1()
+        public void Load_Form1_shouldNotNull()
         {
+            // Set
             var form = new Pacman_Zagorschi_Franco.Form1();
+
+            // Assert
             Assert.IsNotNull(form);
 
         }
@@ -20,8 +23,10 @@ namespace Pacman_Zagorschi_Franco
         [DeploymentItem("Pacman_Zagorschi_Franco.exe")]
         public void button1_click_reset_allGame()
         {
-            // act
+            // Set
             var form = new Pacman_Zagorschi_Franco.Form1();
+
+            // Act
             object sender = null;
             EventArgs e = null;
             form.button1_Click(sender, e);
@@ -29,7 +34,7 @@ namespace Pacman_Zagorschi_Franco
             bool ifStart = false;
             bool isPanel1Visible = false;
 
-            // assert
+            // Assert
             Assert.AreEqual(form.start, ifStart);
             Assert.AreEqual(form.panel1.Visible, isPanel1Visible);
 
@@ -38,13 +43,13 @@ namespace Pacman_Zagorschi_Franco
         [TestMethod]
         public void label254_Click_1_privateMethod_null()
         {
-            // set
+            // Set
             var form = new Pacman_Zagorschi_Franco.Form1();
             object sender = null;
             EventArgs e = null;
             PrivateObject accessor = new PrivateObject(form);
 
-            // act
+            // Act
             accessor.Invoke("label254_Click_1", sender, e);
 
         }
@@ -52,52 +57,52 @@ namespace Pacman_Zagorschi_Franco
         [TestMethod]
         public void pictureBox5_Click_privateMethod_null()
         {
-            // set
+            // Set
             var form = new Pacman_Zagorschi_Franco.Form1();
             object sender = null;
             EventArgs e = null;
             PrivateObject accessor = new PrivateObject(form);
 
-            // act
+            // Act
             accessor.Invoke("pictureBox5_Click", sender, e);
         }
 
         [TestMethod]
         public void label255_Click_privateMethod_null()
         {
-            // set
+            // Set
             var form = new Pacman_Zagorschi_Franco.Form1();
             object sender = null;
             EventArgs e = null;
             PrivateObject accessor = new PrivateObject(form);
 
-            // act
+            // Act
             accessor.Invoke("label255_Click", sender, e);
         }
 
         [TestMethod]
         public void label254_Click_privateMethod_null()
         {
-            // set
+            // Set
             var form = new Pacman_Zagorschi_Franco.Form1();
             object sender = null;
             EventArgs e = null;
             PrivateObject accessor = new PrivateObject(form);
 
-            // act
+            // Act
             accessor.Invoke("label254_Click", sender, e);
         }
 
         [TestMethod]
         public void panel1_Paint_privateMethod_null()
         {
-            // set
+            // Set
             var form = new Pacman_Zagorschi_Franco.Form1();
             object sender = null;
             PaintEventArgs e = null;
             PrivateObject accessor = new PrivateObject(form);
 
-            // act
+            // Act
             accessor.Invoke("panel1_Paint", sender, e);
         }
 
@@ -130,37 +135,37 @@ namespace Pacman_Zagorschi_Franco
         [TestMethod]
         public void pictureBox3_Click_privateMethod_null()
         {
-            // set
+            // Set
             var form = new Pacman_Zagorschi_Franco.Form1();
             object sender = null;
             EventArgs e = null;
             PrivateObject accessor = new PrivateObject(form);
 
-            // act
+            // Act
             accessor.Invoke("pictureBox3_Click", sender, e);
         }
 
         [TestMethod]
         public void button1_MouseLeave_equals_playgame()
         {
-            // set
+            // Set
             var form = new Pacman_Zagorschi_Franco.Form1();
             object sender = null;
             EventArgs e = null;
 
-            // act
+            // Act
             form.button1_MouseLeave(sender, e);
         }
 
         [TestMethod]
         public void button1_MouseEnter_equals_playgame2()
         {
-            // set
+            // Set
             var form = new Pacman_Zagorschi_Franco.Form1();
             object sender = null;
             EventArgs e = null;
 
-            // act
+            // Act
             form.button1_MouseEnter(sender, e);
         }
 
@@ -168,11 +173,13 @@ namespace Pacman_Zagorschi_Franco
         [TestMethod]
         public void Get_Button1_Image_resourse_buttonImage()
         {
-            // set
+            // Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            // act
+            // Act
             var bitmap = form.Get_Button1_Image();
+
+            // Assert
             Assert.AreEqual(bitmap, form.button1.Image);
         }
 
@@ -182,7 +189,7 @@ namespace Pacman_Zagorschi_Franco
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             form.finepartita();
 
             int[] intResults =
@@ -204,7 +211,7 @@ namespace Pacman_Zagorschi_Franco
                 form.timer7.Enabled,
             };
 
-            //Check
+            // Assert
             CollectionAssert.AreEqual(intResults, new[] { 0, 3 });
             CollectionAssert.AreEqual(boolResults, new[] { false, false, false, false, false, false, false, false, true });
 
@@ -217,10 +224,10 @@ namespace Pacman_Zagorschi_Franco
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             form.ghostmangiato_Tick(null, null);
 
-            //Check
+            //Assert
             CollectionAssert.AreEqual(new[] { form.timer1.Enabled, form.ghostmangiato.Enabled }, new[] { true, false });
         }
 
@@ -230,10 +237,10 @@ namespace Pacman_Zagorschi_Franco
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             form.powermod1_Tick(null, null);
 
-            //Check
+            //Assert
             CollectionAssert.AreEqual(new[] { form.tresec, form.powermod1.Enabled }, new[] { true, false });
         }
 
@@ -245,10 +252,10 @@ namespace Pacman_Zagorschi_Franco
             var form = new Pacman_Zagorschi_Franco.Form1();
             form.ghost2.Top = position;
 
-            //Execute
+            //Act
             form.control();
 
-            //Check
+            //Assert
             CollectionAssert.AreEqual(new[] { form.timer3.Enabled, form.timer4.Enabled, form.c, form.timer5.Enabled }, expected);
         }
         public static IEnumerable<object[]> ControlData
@@ -260,7 +267,6 @@ namespace Pacman_Zagorschi_Franco
                 yield return new object[] { 1, new[] { false, false, false, false } }; //Position fails condition
             }
         }
-
 
         //i = input
         //e = expected
@@ -291,14 +297,14 @@ namespace Pacman_Zagorschi_Franco
             form.g3mangiato = i3;
             form.g4mangiato = i4;
 
-            //Execute
+            //Act
             form.supermod2();
             result[0] = form.g1mangiato;
             result[1] = form.g2mangiato;
             result[2] = form.g3mangiato;
             result[3] = form.g4mangiato;
 
-            //Check
+            //Assert
             CollectionAssert.AreEqual(result, new[] { e1, e2, e3, e4 });
         }
 
@@ -309,10 +315,10 @@ namespace Pacman_Zagorschi_Franco
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             form.timer9_Tick(null, null);
 
-            //Check
+            //Assert
             CollectionAssert.AreEqual(new[] { form.timer9.Enabled }, new[] { false });
         }
 
@@ -323,10 +329,10 @@ namespace Pacman_Zagorschi_Franco
                 //Set
                 var form = new Pacman_Zagorschi_Franco.Form1();
 
-                //Execute
+                //Act
                 form.timer8_Tick(null, null);
 
-                //Check
+                //Assert
                 CollectionAssert.AreEqual(new[] { form.timer8.Enabled }, new[] { false });
             }
         }
@@ -337,10 +343,10 @@ namespace Pacman_Zagorschi_Franco
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             form.timer7_Tick(null, null);
 
-            //Check
+            //Assert
             CollectionAssert.AreEqual(new[] { form.timer7.Enabled }, new[] { false });
         }
 
@@ -350,10 +356,10 @@ namespace Pacman_Zagorschi_Franco
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             PictureBox[] result = form.getPictureBox();
 
-            //Check
+            //Assert
             result[1].SizeMode = PictureBoxSizeMode.StretchImage;
             Assert.AreEqual(result[1].SizeMode, form.pictureBox3.SizeMode);
         }
@@ -369,7 +375,7 @@ namespace Pacman_Zagorschi_Franco
             var form = new Pacman_Zagorschi_Franco.Form1();
             form.resetall();
 
-            //Execute
+            //Act
             form.control();
             bool[] result = new bool[4];
             result[0] = false;
@@ -377,7 +383,7 @@ namespace Pacman_Zagorschi_Franco
             result[2] = false;
             result[3] = true;
 
-            //Check
+            //Assert
             CollectionAssert.AreEqual(new[] { form.timer3.Enabled, form.timer4.Enabled, form.c, form.timer5.Enabled }, result);
         }
 
@@ -387,10 +393,10 @@ namespace Pacman_Zagorschi_Franco
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             form.attendo_Tick(null, null);
 
-            //Check
+            //Assert
             Assert.AreEqual(false, form.attendo.Enabled);
         }
 
@@ -404,11 +410,11 @@ namespace Pacman_Zagorschi_Franco
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             form.life();
             form.vita = _vita;
 
-            //Check
+            //Assert
             Assert.AreEqual(_vita, form.vita);
 
 
@@ -436,15 +442,15 @@ namespace Pacman_Zagorschi_Franco
         }*/
 
         [TestMethod]
-        public void collision()
+        public void collision_PacmanGhostCollison_ShouldEnableTime9()
         {
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             form.collision();
 
-            //Check
+            //Assert
             CollectionAssert.AreEqual(new[] { form.timer1.Enabled, form.timer2.Enabled, form.timer3.Enabled,
                 form.timer4.Enabled, form.timer5.Enabled, form.timer6.Enabled, form.timer7.Enabled, form.timer8.Enabled, form.timer9.Enabled}, new[] { false, false, false, false, false, false, false, false, true });
         }
@@ -454,31 +460,24 @@ namespace Pacman_Zagorschi_Franco
         [DataRow(-1)]
         [DataRow(1)]
         [DataRow(2)]
-        public void mangiato(int _vita)
+        public void mangiato_EnablePacmanCanEatMod_ShouldShowVita(int _vita)
         {
             // Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            // Execute
+            // Act
             form.mangiato();
 
-            // Check
+            // Assert
             form.vita = _vita;
             if (_vita == -1 || _vita == 0)
             {
                 Assert.AreEqual(form.vita, _vita);
-
-
             }
-
-
             if (_vita == -1 || _vita == 100)
             {
                 Assert.AreEqual(form.vita, _vita);
-
             }
-
-
         }
 
         [DataTestMethod]
@@ -486,18 +485,18 @@ namespace Pacman_Zagorschi_Franco
         [DataRow(2, 1, -2)]
         [DataRow(3, 4, 2)]
         [DataRow(4, 3, -2)]
-        public void freedirection_nextDirection_keyPress(int direction, int next, int resultantDirection)
+        public void freedirection_nextDirection_keyPress_ShouldFreeDirection(int direction, int next, int resultantDirection)
         {
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             form.resetall();
             form.direzione = direction;
             form.next = next;
             form.freedirection();
 
-            //Test
+            //Assert
             if (direction == 1 || direction == 2)
                 CollectionAssert.AreEqual(new[] { resultantDirection, next, next }, new[] { form.left, form.direzione, form.temp });
             if (direction == 3 || direction == 4)
@@ -505,12 +504,11 @@ namespace Pacman_Zagorschi_Franco
 
         }
 
-        // Increasing statement coverage & decision coverage
         [DataTestMethod]
         [DataRow(true, 0, 0, 374)]
         [DataRow(true, 0, 1, -26)]
         [DataRow(true, 1, 0, 374)]
-        public void testTransport(bool charTurn, int i, int n, int left)
+        public void Pacturn_GhostTurn_Transport_shouldReturnCorrectDirection(bool charTurn, int i, int n, int left)
         {
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
@@ -521,7 +519,7 @@ namespace Pacman_Zagorschi_Franco
             form.ghost3turn = charTurn;
             form.ghost4turn = charTurn;
 
-            //Execute
+            //Act
             form.transport(i, n);
             int[] arr = form.getCharacterLeft();
             int[] res = { left, left, left, left, left };
@@ -529,19 +527,19 @@ namespace Pacman_Zagorschi_Franco
             for (int j = 0; j < 4; j++)
                 Console.WriteLine(arr[0] + "," + res[j]);
 
-            //Check
+            //Assert
             CollectionAssert.AreEqual(arr, res);
 
         }
 
         [DataTestMethod]
         [DataRow(true, 300, 20, 100, 40)]
-        public void testGhost(bool enabled, int ghostLeft, int willGhostLeft, int ghostTop, int willGhostTop)
+        public void DirectionGhost_EnterDirectionKey_ShouldMakeGhostTurn(bool enabled, int ghostLeft, int willGhostLeft, int ghostTop, int willGhostTop)
         {
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             form.ghost1.Left = ghostLeft;
             form.leftghost1 = willGhostLeft;
             form.ghost1.Top = ghostTop;
@@ -572,12 +570,12 @@ namespace Pacman_Zagorschi_Franco
 
         [DataTestMethod]
         [DataRow(100, 20, 200, 40)]
-        public void testDirection(int pacmanLeft, int left, int pacmanTop, int top)
+        public void Direction_EnterDirectionKeys_shouldEnablePacmanMakeTurn(int pacmanLeft, int left, int pacmanTop, int top)
         {
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             form.left = left;
             form.getPacman().Left = pacmanLeft;
             form.top = top;
@@ -585,7 +583,7 @@ namespace Pacman_Zagorschi_Franco
 
             form.direction();
 
-            //Test
+            //Assert
             CollectionAssert.AreEqual(new[] { left + pacmanLeft, top + pacmanTop }, new[] { form.getPacman().Left, form.getPacman().Top });
         }
 
@@ -776,19 +774,19 @@ namespace Pacman_Zagorschi_Franco
         [DataRow(-28, 186)]
         [DataRow(-28, 0)]
 
-        public void testCrossRoads_functionA(int left, int top)
+        public void CrossRoads_functionA_Pacman_ShouldCrossRoads(int left, int top)
         {
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             form.pacturn = true;
             form.a(left, top);
 
             form.pacturn = false;
             form.a(left, top);
 
-            //Test
+            //Assert
             Assert.IsTrue(true);
         }
 
@@ -798,16 +796,16 @@ namespace Pacman_Zagorschi_Franco
         [DataRow(Keys.Up, 3)]
         [DataRow(Keys.Down, 4)]
         [DataRow(Keys.Escape, 0)]
-        public void test_Form1_KeyDown(Keys keyValue, int resultantTemp)
+        public void Form1_KeyDown_ShouldEnableKeyboardEvent(Keys keyValue, int resultantTemp)
         {
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             KeyEventArgs e = new KeyEventArgs(keyValue);
             form.Form1_KeyDown(null, e);
 
-            //Test
+            //Assert
             Assert.AreEqual(resultantTemp, form.temp);
         }
 
@@ -833,8 +831,7 @@ namespace Pacman_Zagorschi_Franco
             //Setup
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
-
+            //Act
             form.ghost1.Enabled = b1;
             form.ghost2.Enabled = b2;
             form.ghost3.Enabled = b3;
@@ -842,37 +839,37 @@ namespace Pacman_Zagorschi_Franco
             form.c = true;
             form.timer1_Tick(null, null);
 
-            //Test
+            //Assert
             Assert.IsTrue(true);
         }
 
         [TestMethod]
-        public void test_timer2_Tick()
+        public void Timer2Tick_Pacman_ShouldStartMoving()
         {
             //Setup
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             form.timer2_Tick(null, null);
 
-            //Test
+            //Assert
             CollectionAssert.AreEqual(new[] { false, true, false, true }, new[] { form.getLabel3().Visible, form.timer1.Enabled, form.timer2.Enabled, form.c });
         }
 
         [DataTestMethod]
         [DataRow(180, 100, 2)]
         [DataRow(192, 100, 1)]
-        public void test_timer3_Tick(int ghost2TopValue, int ghost4TopValue, int startDirectionValue)
+        public void Timer3Tick_Ghost2Ghost4_ShouldStartMoving(int ghost2TopValue, int ghost4TopValue, int startDirectionValue)
         {
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             form.ghost2.Top = ghost2TopValue;
             form.ghost4.Top = ghost4TopValue;
             form.timer3_Tick(null, null);
 
-            //Test
+            //Assert
             if (startDirectionValue == 1)
                 CollectionAssert.AreEqual(new[] { ghost2TopValue - 1, ghost4TopValue - 1, startDirectionValue }, new[] { form.ghost2.Top, form.ghost4.Top, form.startdirection });
             else if (startDirectionValue == 2)
@@ -897,14 +894,14 @@ namespace Pacman_Zagorschi_Franco
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             int prec1Value = form.prec1;
             bool timer4 = form.timer4.Enabled;
             form.tic4 = tic4Value;
             form.ghost3.Top = ghost3TopValue;
             form.timer4_Tick(null, null);
 
-            //Test
+            //Assert
             if (ghost3TopValue > 151 && tic4Value > 99)
             {
                 CollectionAssert.AreEqual(new[] { tic4Value + 1, 3, ghost3TopValue - 1, Convert.ToInt32(timer4) }, new[] { form.tic4, form.prec1, form.ghost3.Top, Convert.ToInt32(form.timer4.Enabled) });
@@ -940,12 +937,12 @@ namespace Pacman_Zagorschi_Franco
         [DataRow(151, 175, 301)]
         [DataRow(151, 176, 300)]
         [DataRow(151, 176, 301)]
-        public void test_timer5Tick(int ghost2TopValue, int ghost2LeftValue, int tic5Value)
+        public void Timer5Tick_Ghost2_ShouldLeaveHome(int ghost2TopValue, int ghost2LeftValue, int tic5Value)
         {
-            //Setup
+            //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             form.tic5 = tic5Value;
             form.ghost2.Left = ghost2LeftValue;
             bool timer6 = form.timer6.Enabled;
@@ -953,7 +950,7 @@ namespace Pacman_Zagorschi_Franco
             form.ghost2.Top = ghost2TopValue;
             form.timer5_Tick(null, null);
 
-            //Test
+            //Assert
             if (ghost2TopValue == 151 && ghost2LeftValue == 175 && tic5Value > 299)
             {
                 CollectionAssert.AreEqual(new[] { true, false }, new[] { form.timer6.Enabled, form.timer5.Enabled }, "All three ifs passed");
@@ -989,19 +986,19 @@ namespace Pacman_Zagorschi_Franco
         [DataRow(151, 177, 101)]
         [DataRow(151, 176, 100)]
         [DataRow(151, 176, 101)]
-        public void test_timer6Tick(int ghost4TopValue, int ghost4LeftValue, int tic6Value)
+        public void Timer6Tick_Ghost4_ShouldLeaveHome(int ghost4TopValue, int ghost4LeftValue, int tic6Value)
         {
-            //Setup
+            //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             form.tic6 = tic6Value;
             form.ghost4.Left = ghost4LeftValue;
             bool timer6 = form.timer6.Enabled;
             form.ghost4.Top = ghost4TopValue;
             form.timer6_Tick(null, null);
 
-            //Test
+            //Assert
             if (ghost4TopValue == 151 && ghost4LeftValue == 177 && tic6Value > 99)
             {
                 Assert.AreEqual(false, form.timer6.Enabled, "All three ifs passed");
@@ -1032,12 +1029,16 @@ namespace Pacman_Zagorschi_Franco
         [DataRow(-1, -2, -3, -4, false)]
         public void powermod_tick_enable_ghost_notEating(int c1, int c2, int c3, int c4, bool b)
         {
+            // Set
             var form = new Pacman_Zagorschi_Franco.Form1();
+
+            // Act
             object sender = null;
             EventArgs e = null;
             form.powermod_Tick(sender, e);
             form.tresec = false;
 
+            //Assert
             form.g1mangiato = false;
             Assert.IsFalse(form.v1);
             Assert.IsTrue(form.ghost1puomangiare);
@@ -1141,12 +1142,12 @@ namespace Pacman_Zagorschi_Franco
         [DataRow(28, 54)]
         [DataRow(330, 54)]
         [DataRow(330, 298)]
-        public void test_supermod(int x, int y)
+        public void Supermod_Tick_shoudEnabled(int x, int y)
         {
             //Set
             var form = new Pacman_Zagorschi_Franco.Form1();
 
-            //Execute
+            //Act
             form.getPacman().Location = new System.Drawing.Point(x, y);
 
             if (x == 31)
@@ -1160,7 +1161,7 @@ namespace Pacman_Zagorschi_Franco
 
             form.supermod();
 
-            //Test
+            //Assert
             Assert.IsTrue(true);
         }
 
